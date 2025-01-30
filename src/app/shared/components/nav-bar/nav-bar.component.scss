@@ -1,0 +1,24 @@
+.spacer {
+    flex: 1 1 auto;
+}
+  
+.red-text {
+    color: #FF0000;
+  }
+  
+.brand-container{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+mat-toolbar{
+    background: rgba(187, 222, 251, 0.65); /* Color de fondo con 80% de opacidad */
+}
+
+.open-color {
+    background-color: rgba(251, 187, 190, 0.6); /* Color cuando el sidebar está abierto */
+  }
+
+.closed-color {
+    background-color: rgba(187, 222, 251, 0.6); /* Color cuando el sidebar está cerrado */
+}

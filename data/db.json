@@ -1,0 +1,43 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "nombre": "Juan Perez",
+            "email": "juan.perez@example.com",
+            "telefono": "1234567890",
+            "rol": "admin",
+            "password": "password123",
+            "clasificacion": 5,
+            "wishlist": [1, 2]
+        }
+    ],
+    "productos": [
+        {
+            "id": 1,
+            "marca": "Toyota",
+            "modelo": "Corolla",
+            "anio": 2020,
+            "precio": 20000,
+            "descripcion": "A reliable car",
+            "imagen": "toyota_corolla.jpg",
+            "categoria": "Sedan",
+            "tipo": "Car"
+        }
+    ],
+    "comentarios": [
+        {
+            "id": 1,
+            "product": 1,
+            "creator": 1,
+            "creationDate": "2023-10-01T12:00:00Z"
+        }
+    ],
+    "publicaciones": [
+        {
+            "id": 1,
+            "producto": 1,
+            "precio": 20000,
+            "cantidad": 5
+        }
+    ]
+}

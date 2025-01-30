@@ -1,0 +1,10 @@
+<mat-toolbar color="accent ">
+    <div class="brand-container" routerLink="/home">
+        <span>Next</span>
+        <span class="red-text">Car</span>
+      </div>
+    <span class="spacer" ></span>
+    <button mat-mini-fab [ngClass]="{'open-color': isSidebarOpen, 'closed-color': !isSidebarOpen}"  (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>

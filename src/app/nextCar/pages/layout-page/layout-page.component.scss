@@ -1,0 +1,29 @@
+.sidenav-container {
+    height: 100%; /* Ocupa el 100% de la altura de la pantalla */
+  }
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.sidenav-header {
+    padding: 16px; /* Ajusta el padding para alinear con los mat-list-item */
+    margin: 0; /* Elimina el margen por defecto */
+    background: rgba(251, 187, 190, 0.6); /* Color de fondo */
+  }
+
+.sidenav-body {
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    background:  rgba(251, 187, 190, 0.3); 
+  }
+
+.menu-icon {
+    margin-top: 1000px; /* Ajusta este valor según sea necesario */
+}
+
+@media (max-width: 600px) {
+    .mat-sidenav {
+      width: 50vw; /* Limita el ancho del sidenav al 50% del ancho de la pantalla en pantallas pequeñas */
+    }
+}

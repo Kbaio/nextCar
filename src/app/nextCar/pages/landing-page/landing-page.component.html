@@ -1,0 +1,18 @@
+<h2 style="margin-left: 20px;">Tendencias</h2>
+<p-carousel [value]="products" [numVisible]="numVisible" [numScroll]="1" [circular]="true" [autoplayInterval]="10000">
+  <ng-template pTemplate="item" let-item>
+    <div class="carousel-item">
+    <!-- <app-featured-card [product]="item"></app-featured-card> -->
+    </div>
+  </ng-template>
+</p-carousel>
+<br>
+
+<mat-divider></mat-divider>
+<br>
+<h2 style="margin-left: 20px;">Categorias</h2>
+<div class="category-cards">
+<!-- <app-category-card *ngFor="let item of categories" [category]="item" (categorySelected)="onCategorySelected($event)"></app-category-card> -->
+</div>
+
+<br>

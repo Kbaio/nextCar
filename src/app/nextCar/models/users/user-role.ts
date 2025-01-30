@@ -1,0 +1,1 @@
+export type UserRole = 'Institucion' | 'Usuario' | 'Administrador';
