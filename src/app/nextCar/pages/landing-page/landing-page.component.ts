@@ -16,5 +16,5 @@ import { ButtonModule } from 'primeng/button';
 })
 export class LandingPageComponent {
   public numVisible: number = 3;
-  public products: Product[] = [];
+  public products: number[] = [];
 }
