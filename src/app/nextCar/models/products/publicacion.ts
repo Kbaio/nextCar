@@ -1,7 +1,7 @@
 export interface Publicacion {
     id: number | string;
     producto: number;
-    precio: number;
+    vendedor: number;
     cantidad: number;
 }
 
