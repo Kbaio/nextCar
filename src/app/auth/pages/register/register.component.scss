@@ -1,0 +1,89 @@
+:host {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: flex-start; /* Mueve el contenido hacia arriba */
+    height: 100vh;          /* Ocupa toda la altura de la ventana */
+    background-color: #f5f5f5; /* Fondo claro */
+    padding-top: 20px; /* Espacio superior adicional */
+    margin: 0; /* Asegúrate de eliminar márgenes extras */
+  }
+  
+  .register-card {
+    max-width: 600px; /* Ancho máximo del cuadro */
+    width: 90%; /* Se adapta a pantallas más pequeñas */
+    height: auto; /* Ajusta la altura según el contenido */
+    padding: 40px; /* Mayor espacio interno */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: white; /* Fondo blanco */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: space-between; /* Espacia uniformemente los elementos */
+  }
+  
+  .register-title {
+    font-size: 32px; /* Tamaño más grande para el título */
+    font-weight: bold;
+    color: #3f51b5; /* Color azul */
+    margin-bottom: 20px; /* Espacio debajo del título */
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 20px; /* Espaciado más grande entre campos */
+  }
+  
+  .login-container {
+    margin-top: 20px;
+    text-align: center;
+  
+    .login-text {
+      font-size: 16px; /* Texto ligeramente más grande */
+    }
+  
+    .login-link {
+      display: block;
+      margin-top: 5px;
+      color: #3f51b5;
+      text-decoration: none;
+      font-weight: bold;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between; /* Espaciado uniforme */
+    margin-top: 40px;
+  
+    button {
+      width: 45%; /* Tamaño uniforme */
+      font-weight: bold;
+      border: 2px solid transparent; /* Evita bordes por defecto */
+    }
+  
+    .btn-volver {
+      color: #f44336; /* Letras rojas */
+      border-color: #f44336; /* Borde rojo */
+      background-color: white; /* Fondo blanco */
+      &:hover {
+        background-color: #f44336; /* Fondo rojo al pasar el mouse */
+        color: white; /* Texto blanco */
+      }
+    }
+  
+    .btn-registrarse {
+      color: #3f51b5; /* Letras azules */
+      border-color: #3f51b5; /* Borde azul */
+      background-color: white; /* Fondo blanco */
+      &:hover {
+        background-color: #3f51b5; /* Fondo azul al pasar el mouse */
+        color: white; /* Texto blanco */
+      }
+    }
+  }
+  
