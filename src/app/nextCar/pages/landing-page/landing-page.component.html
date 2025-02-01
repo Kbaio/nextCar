@@ -1,9 +1,8 @@
-<h2 style="margin-left: 20px;">Tendencias</h2>
-<section>
-  <div class="botton-container">
-    <button mat-raised-button>Ver todos</button>
-  </div>
-</section>
+<div class="tendencias-header">
+  <h2>Tendencias</h2>
+  <button mat-raised-button class="ver-todos-btn">Ver todos</button>
+</div>
+
 <p-carousel [value]="products" [numVisible]="numVisible" [numScroll]="1" [circular]="true" [autoplayInterval]="10000">
   <ng-template pTemplate="item" let-item>
     <div class="carousel-item">

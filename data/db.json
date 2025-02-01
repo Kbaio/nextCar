@@ -79,7 +79,7 @@
             "anio": 2020,
             "precio": 20000,
             "descripcion": "A reliable car",
-            "imagen": "toyota_corolla.jpg",
+            "imagen": "https://chevroletcr.com/blog/wp-content/uploads/2024/07/chevrolet-costa-rica-01.jpg",
             "categoria": "Sedan",
             "tipo": "Usado"
         }
@@ -91,7 +91,7 @@
         "anio": 2021,
         "precio": 22000,
         "descripcion": "A compact car",
-        "imagen": "public/Carro1.jpg",
+        "imagen": "https://cdn.pixabay.com/photo/2016/03/31/20/01/auto-1295461_1280.png",
         "categoria": "Sedan",
         "tipo": "Nuevo"
         },
@@ -102,7 +102,7 @@
         "anio": 2019,
         "precio": 30000,
         "descripcion": "A powerful car",
-        "imagen": "public/Carro2.jpg",
+        "imagen": "https://images.thimbletoys.com/images/items/3690086Db.jpg",
         "categoria": "Coupe",
         "tipo": "Usado"
         },
@@ -113,7 +113,7 @@
         "anio": 2018,
         "precio": 28000,
         "descripcion": "A stylish car",
-        "imagen": "public/Carro3.jpg",
+        "imagen": "https://chevroletcr.com/blog/wp-content/uploads/2024/07/chevrolet-costa-rica-01.jpg",
         "categoria": "Coupe",
         "tipo": "Usado"
         },
@@ -124,7 +124,7 @@
         "anio": 2022,
         "precio": 50000,
         "descripcion": "A luxury SUV",
-        "imagen": "public/Carro1.jpg",
+        "imagen": "https://cdn.pixabay.com/photo/2016/03/31/20/01/auto-1295461_1280.png",
         "categoria": "SUV",
         "tipo": "Nuevo"
         },
@@ -135,7 +135,7 @@
         "anio": 2020,
         "precio": 35000,
         "descripcion": "A premium sedan",
-        "imagen": "public/Carro2.jpg",
+        "imagen": "https://images.thimbletoys.com/images/items/3690086Db.jpg",
         "categoria": "Sedan",
         "tipo": "Usado"
         },
@@ -146,7 +146,7 @@
         "anio": 2021,
         "precio": 40000,
         "descripcion": "A luxury sedan",
-        "imagen": "public/Carro3.jpg",
+        "imagen": "https://lumiere-a.akamaihd.net/v1/images/og_cars_lightningmcqueenday_18244_4435f27a.jpeg?region=40,0,1120,630",
         "categoria": "Sedan",
         "tipo": "Nuevo"
         },
@@ -157,7 +157,7 @@
         "anio": 2022,
         "precio": 45000,
         "descripcion": "An electric car",
-        "imagen": "public/Carro1.jpg",
+        "imagen": "https://chevroletcr.com/blog/wp-content/uploads/2024/07/chevrolet-costa-rica-01.jpg",
         "categoria": "Sedan",
         "tipo": "Nuevo"
         },
@@ -168,7 +168,7 @@
         "anio": 2019,
         "precio": 18000,
         "descripcion": "A mid-size sedan",
-        "imagen": "public/Carro2.jpg",
+        "imagen": "https://cdn.pixabay.com/photo/2016/03/31/20/01/auto-1295461_1280.png",
         "categoria": "Sedan",
         "tipo": "Usado"
         },
@@ -179,7 +179,7 @@
         "anio": 2020,
         "precio": 20000,
         "descripcion": "A compact sedan",
-        "imagen": "public/Carro3.jpg",
+        "imagen": "https://images.thimbletoys.com/images/items/3690086Db.jpg",
         "categoria": "Sedan",
         "tipo": "Usado"
         },
@@ -190,7 +190,7 @@
         "anio": 2021,
         "precio": 32000,
         "descripcion": "A mid-size SUV",
-        "imagen": "public/Carro1.jpg",
+        "imagen": "https://lumiere-a.akamaihd.net/v1/images/og_cars_lightningmcqueenday_18244_4435f27a.jpeg?region=40,0,1120,630",
         "categoria": "SUV",
         "tipo": "Usado"
         },
@@ -201,7 +201,7 @@
         "anio": 2020,
         "precio": 28000,
         "descripcion": "A compact SUV",
-        "imagen": "public/Carro2.jpg",
+        "imagen": "https://chevroletcr.com/blog/wp-content/uploads/2024/07/chevrolet-costa-rica-01.jpg",
         "categoria": "SUV",
         "tipo": "Usado"
         },
@@ -212,7 +212,7 @@
         "anio": 2019,
         "precio": 27000,
         "descripcion": "A versatile SUV",
-        "imagen": "public/Carro3.jpg",
+        "imagen": "https://cdn.pixabay.com/photo/2016/03/31/20/01/auto-1295461_1280.png",
         "categoria": "SUV",
         "tipo": "Usado"
         },
@@ -223,7 +223,7 @@
         "anio": 2021,
         "precio": 23000,
         "descripcion": "A compact sedan",
-        "imagen": "public/Carro1.jpg",
+        "imagen": "https://images.thimbletoys.com/images/items/3690086Db.jpg",
         "categoria": "Sedan",
         "tipo": "Usado"
         },
@@ -234,7 +234,7 @@
         "anio": 2022,
         "precio": 55000,
         "descripcion": "A luxury SUV",
-        "imagen": "public/Carro2.jpg",
+        "imagen": "https://lumiere-a.akamaihd.net/v1/images/og_cars_lightningmcqueenday_18244_4435f27a.jpeg?region=40,0,1120,630",
         "categoria": "SUV",
         "tipo": "Nuevo"
         },
@@ -245,7 +245,7 @@
         "anio": 2020,
         "precio": 35000,
         "descripcion": "An off-road SUV",
-        "imagen": "public/Carro3.jpg",
+        "imagen": "https://chevroletcr.com/blog/wp-content/uploads/2024/07/chevrolet-costa-rica-01.jpg",
         "categoria": "SUV",
         "tipo": "Usado"
         }

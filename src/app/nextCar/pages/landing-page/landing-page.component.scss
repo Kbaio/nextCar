@@ -1,0 +1,20 @@
+.tendencias-header {
+    display: flex;
+    justify-content: space-between; /* Distribuye el h2 a la izquierda y el botón a la derecha */
+    align-items: center; /* Alinea verticalmente */
+    margin: 0 20px; /* Mantiene el margen a la izquierda y algo de espacio */
+  }
+  
+  .ver-todos-btn {
+    background-color: white !important;
+    color: lightblue !important;
+    border: 2px solid lightblue !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .ver-todos-btn:hover {
+    background-color: lightblue !important;
+    color: white !important;
+  }
