@@ -1,10 +1,11 @@
+import { routes } from './../../../app.routes';
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { NavBarComponent } from "../../../shared/components/nav-bar/nav-bar.component";
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 
 
@@ -26,8 +27,14 @@ export class LayoutPageComponent {
   
   isSidebarOpen: boolean = true; // Estado del sidebar
 
+  constructor(private router: Router) { }
+
   toggleSidenav() {
     this.isSidebarOpen = !this.isSidebarOpen; // Cambiar estado del sidebar
+  }
+
+  isProductListPage(): boolean {
+    return this.router.url.includes('product-list');
   }
 
 }

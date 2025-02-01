@@ -18,9 +18,7 @@ export class ProductListPageComponent {
   brands: string[] = [];
   selectedBrands: string[] = [];
 
-  constructor(
-    private ProductosTsService,
-  ) { }
+  constructor (private productosService: ProductosTsService) { }
 
 
   

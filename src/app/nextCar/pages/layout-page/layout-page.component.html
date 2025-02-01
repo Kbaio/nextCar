@@ -11,9 +11,9 @@
         <a mat-list-item routerLink="create-post">Crear Post</a>
         <a mat-list-item routerLink="product-list">Productos</a>
       </mat-nav-list>
-
-
-
+      <div *ngIf="isSidebarOpen && isProductListPage()">
+        <h3>Opciones de Filtrado</h3>
+      </div>
 
 
     </mat-sidenav>
