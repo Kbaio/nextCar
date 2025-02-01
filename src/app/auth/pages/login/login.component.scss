@@ -1,76 +1,87 @@
 :host {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;    /* Centra verticalmente */
-    height: 100vh;          /* Ocupa toda la altura de la ventana */
-    background-color: #f5f5f5; /* Fondo claro */
-    margin: 0; /* Asegúrate de eliminar márgenes extras */
-  }
-  
-  .login-card {
-    max-width: 400px;
-    width: 90%; /* Se adapta a pantallas más pequeñas */
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
-    border-radius: 8px; /* Bordes redondeados */
-    background-color: white; /* Fondo blanco */
-  }
-  
-  .login-title {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .full-width {
-    width: 100%;
-    margin-bottom: 16px;
-  }
-  
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: flex-start; /* Mueve el contenido hacia arriba */
+  height: 100vh;          /* Ocupa toda la altura de la ventana */
+  background-color: #f5f5f5; /* Fondo claro */
+  padding-top: 20px; /* Espacio superior adicional */
+  margin: 0; /* Asegúrate de eliminar márgenes extras */
+}
+
+.login-card {
+  max-width: 600px; /* Ancho máximo del cuadro */
+  width: 90%; /* Se adapta a pantallas más pequeñas */
+  height: 90vh; /* Utiliza más espacio vertical */
+  padding: 40px; /* Mayor espacio interno */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: white; /* Fondo blanco */
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en columna */
+  justify-content: space-between; /* Espacia uniformemente los elementos */
+}
+
+.login-title {
+  font-size: 32px; /* Tamaño más grande para el título */
+  font-weight: bold;
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px; /* Espaciado más grande entre campos */
+}
+
+.register-container {
+  margin-top: 20px;
+  text-align: center;
+
   .register-text {
-    margin-top: 10px;
-    font-size: 14px;
-  
-    .register-link {
-      color: #3f51b5;
-      text-decoration: none;
-      font-weight: bold;
-  
-      &:hover {
-        text-decoration: underline;
-      }
+    font-size: 16px; /* Texto ligeramente más grande */
+  }
+
+  .register-link {
+    display: block;
+    margin-top: 5px;
+    color: #3f51b5;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
-  
-  .action-buttons {
-    display: flex;
-    justify-content: space-between; /* Espaciado uniforme */
-    margin-top: 20px;
-  
-    button {
-      width: 45%; /* Tamaño uniforme */
-      font-weight: bold;
-      border: 2px solid transparent; /* Evita bordes por defecto */
-    }
-  
-    .btn-volver {
-      color: #f44336; /* Letras rojas */
-      border-color: #f44336; /* Borde rojo */
-      background-color: white; /* Fondo blanco */
-      &:hover {
-        background-color: #f44336; /* Fondo rojo al pasar el mouse */
-        color: white; /* Texto blanco */
-      }
-    }
-  
-    .btn-registrarse {
-      color: #4caf50; /* Letras verdes */
-      border-color: #4caf50; /* Borde verde */
-      background-color: white; /* Fondo blanco */
-      &:hover {
-        background-color: #4caf50; /* Fondo verde al pasar el mouse */
-        color: white; /* Texto blanco */
-      }
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between; /* Espaciado uniforme */
+  margin-top: 40px;
+
+  button {
+    width: 45%; /* Tamaño uniforme */
+    font-weight: bold;
+    border: 2px solid transparent; /* Evita bordes por defecto */
+  }
+
+  .btn-volver {
+    color: #f44336; /* Letras rojas */
+    border-color: #f44336; /* Borde rojo */
+    background-color: white; /* Fondo blanco */
+    &:hover {
+      background-color: #f44336; /* Fondo rojo al pasar el mouse */
+      color: white; /* Texto blanco */
     }
   }
-  
+
+  .btn-registrarse {
+    color: #4caf50; /* Letras verdes */
+    border-color: #4caf50; /* Borde verde */
+    background-color: white; /* Fondo blanco */
+    &:hover {
+      background-color: #4caf50; /* Fondo verde al pasar el mouse */
+      color: white; /* Texto blanco */
+    }
+  }
+}
