@@ -1,20 +1,23 @@
-<p>login works!</p>
-<mat-card class="example-card" appearance="outlined">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content> 
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+<mat-card class="login-card">
+  <mat-card-title class="login-title">Login</mat-card-title>
+  <mat-card-content>
+    <form>
+      <mat-form-field class="full-width">
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput placeholder="example@hotmail.com" type="email" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Contraseña</mat-label>
+        <input matInput placeholder="********" type="password" />
+      </mat-form-field>
+      <div class="register-container">
+        <p class="register-text">¿No estás registrado?</p>
+        <a href="#" class="register-link">Regístrate aquí</a>
+      </div>
+    </form>
+  </mat-card-content>
+  <mat-card-actions class="action-buttons">
+    <button mat-stroked-button class="btn-volver">Volver</button>
+    <button mat-stroked-button class="btn-registrarse">Registrarse</button>
+  </mat-card-actions>
+</mat-card>
