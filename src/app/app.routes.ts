@@ -21,7 +21,7 @@ export const routes: Routes = [
             { path: 'wishlist', component: WishlistPageComponent },
             { path: 'profile', component: ProfilePageComponent },
             { path: 'create-post', component: CreatePostPageComponent },
-            { path: '**', redirectTo: 'landing',  }, //Cambiar el valor de redirectTo por su pagina para trabajar en ella default: "landing"
+            { path: '**', redirectTo: 'landing',  }, 
         ]
     },
     {

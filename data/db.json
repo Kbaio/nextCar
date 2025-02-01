@@ -9,6 +9,66 @@
             "password": "password123",
             "clasificacion": 5,
             "wishlist": [1, 2]
+        },   
+        {
+        "id": 2,
+        "nombre": "Maria Gomez",
+        "email": "maria.gomez@example.com",
+        "telefono": "0987654321",
+        "rol": "agencia",
+        "password": "password456",
+        "clasificacion": 4,
+        "wishlist": [2, 3]
+        },
+        {
+        "id": 3,
+        "nombre": "Carlos Ruiz",
+        "email": "carlos.ruiz@example.com",
+        "telefono": "1122334455",
+        "rol": "usuario",
+        "password": "password789",
+        "clasificacion": 3,
+        "wishlist": [1, 3]
+        },
+        {
+        "id": 4,
+        "nombre": "Ana Martinez",
+        "email": "ana.martinez@example.com",
+        "telefono": "2233445566",
+        "rol": "admin",
+        "password": "password101",
+        "clasificacion": 5,
+        "wishlist": [2, 4]
+        },
+        {
+        "id": 5,
+        "nombre": "Luis Fernandez",
+        "email": "luis.fernandez@example.com",
+        "telefono": "3344556677",
+        "rol": "agencia",
+        "password": "password202",
+        "clasificacion": 4,
+        "wishlist": [1, 5]
+        },
+        {
+        "id": 6,
+        "nombre": "Laura Sanchez",
+        "email": "laura.sanchez@example.com",
+        "telefono": "4455667788",
+        "rol": "usuario",
+        "password": "password303",
+        "clasificacion": 3,
+        "wishlist": [3, 4]
+        },
+        {
+        "id": 7,
+        "nombre": "Jorge Ramirez",
+        "email": "jorge.ramirez@example.com",
+        "telefono": "5566778899",
+        "rol": "admin",
+        "password": "password404",
+        "clasificacion": 5,
+        "wishlist": [2, 6]
         }
     ],
     "productos": [
@@ -21,7 +81,173 @@
             "descripcion": "A reliable car",
             "imagen": "toyota_corolla.jpg",
             "categoria": "Sedan",
-            "tipo": "Car"
+            "tipo": "Usado"
+        }
+        ,
+        {
+        "id": 2,
+        "marca": "Honda",
+        "modelo": "Civic",
+        "anio": 2021,
+        "precio": 22000,
+        "descripcion": "A compact car",
+        "imagen": "public/Carro1.jpg",
+        "categoria": "Sedan",
+        "tipo": "Nuevo"
+        },
+        {
+        "id": 3,
+        "marca": "Ford",
+        "modelo": "Mustang",
+        "anio": 2019,
+        "precio": 30000,
+        "descripcion": "A powerful car",
+        "imagen": "public/Carro2.jpg",
+        "categoria": "Coupe",
+        "tipo": "Usado"
+        },
+        {
+        "id": 4,
+        "marca": "Chevrolet",
+        "modelo": "Camaro",
+        "anio": 2018,
+        "precio": 28000,
+        "descripcion": "A stylish car",
+        "imagen": "public/Carro3.jpg",
+        "categoria": "Coupe",
+        "tipo": "Usado"
+        },
+        {
+        "id": 5,
+        "marca": "BMW",
+        "modelo": "X5",
+        "anio": 2022,
+        "precio": 50000,
+        "descripcion": "A luxury SUV",
+        "imagen": "public/Carro1.jpg",
+        "categoria": "SUV",
+        "tipo": "Nuevo"
+        },
+        {
+        "id": 6,
+        "marca": "Audi",
+        "modelo": "A4",
+        "anio": 2020,
+        "precio": 35000,
+        "descripcion": "A premium sedan",
+        "imagen": "public/Carro2.jpg",
+        "categoria": "Sedan",
+        "tipo": "Usado"
+        },
+        {
+        "id": 7,
+        "marca": "Mercedes-Benz",
+        "modelo": "C-Class",
+        "anio": 2021,
+        "precio": 40000,
+        "descripcion": "A luxury sedan",
+        "imagen": "public/Carro3.jpg",
+        "categoria": "Sedan",
+        "tipo": "Nuevo"
+        },
+        {
+        "id": 8,
+        "marca": "Tesla",
+        "modelo": "Model 3",
+        "anio": 2022,
+        "precio": 45000,
+        "descripcion": "An electric car",
+        "imagen": "public/Carro1.jpg",
+        "categoria": "Sedan",
+        "tipo": "Nuevo"
+        },
+        {
+        "id": 9,
+        "marca": "Nissan",
+        "modelo": "Altima",
+        "anio": 2019,
+        "precio": 18000,
+        "descripcion": "A mid-size sedan",
+        "imagen": "public/Carro2.jpg",
+        "categoria": "Sedan",
+        "tipo": "Usado"
+        },
+        {
+        "id": 10,
+        "marca": "Hyundai",
+        "modelo": "Elantra",
+        "anio": 2020,
+        "precio": 20000,
+        "descripcion": "A compact sedan",
+        "imagen": "public/Carro3.jpg",
+        "categoria": "Sedan",
+        "tipo": "Usado"
+        },
+        {
+        "id": 11,
+        "marca": "Kia",
+        "modelo": "Sorento",
+        "anio": 2021,
+        "precio": 32000,
+        "descripcion": "A mid-size SUV",
+        "imagen": "public/Carro1.jpg",
+        "categoria": "SUV",
+        "tipo": "Usado"
+        },
+        {
+        "id": 12,
+        "marca": "Mazda",
+        "modelo": "CX-5",
+        "anio": 2020,
+        "precio": 28000,
+        "descripcion": "A compact SUV",
+        "imagen": "public/Carro2.jpg",
+        "categoria": "SUV",
+        "tipo": "Usado"
+        },
+        {
+        "id": 13,
+        "marca": "Subaru",
+        "modelo": "Outback",
+        "anio": 2019,
+        "precio": 27000,
+        "descripcion": "A versatile SUV",
+        "imagen": "public/Carro3.jpg",
+        "categoria": "SUV",
+        "tipo": "Usado"
+        },
+        {
+        "id": 14,
+        "marca": "Volkswagen",
+        "modelo": "Jetta",
+        "anio": 2021,
+        "precio": 23000,
+        "descripcion": "A compact sedan",
+        "imagen": "public/Carro1.jpg",
+        "categoria": "Sedan",
+        "tipo": "Usado"
+        },
+        {
+        "id": 15,
+        "marca": "Lexus",
+        "modelo": "RX",
+        "anio": 2022,
+        "precio": 55000,
+        "descripcion": "A luxury SUV",
+        "imagen": "public/Carro2.jpg",
+        "categoria": "SUV",
+        "tipo": "Nuevo"
+        },
+        {
+        "id": 16,
+        "marca": "Jeep",
+        "modelo": "Wrangler",
+        "anio": 2020,
+        "precio": 35000,
+        "descripcion": "An off-road SUV",
+        "imagen": "public/Carro3.jpg",
+        "categoria": "SUV",
+        "tipo": "Usado"
         }
     ],
     "comentarios": [
