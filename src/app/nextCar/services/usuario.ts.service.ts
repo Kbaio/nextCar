@@ -18,4 +18,13 @@ export class UsuarioTsService {
   addUsuario(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(`${this.baseUrl}/usuarios`, usuario);
   }
+
+  getUsuarioById(id: number): Observable<Usuario> {
+    return this.http.get<Usuario>(`${this.baseUrl}/usuarios/${id}`);
+  }
+
+  updateUsuario(usuario: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>(`${this.baseUrl}/usuarios/${usuario.id}`, usuario);
+  }
+  
 }

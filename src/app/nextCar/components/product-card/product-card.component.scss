@@ -1,0 +1,16 @@
+.discount-card {
+    width: 250px; /* Ajusta el ancho del card según tus necesidades */
+    margin: 0 auto; /* Centra el card horizontalmente */
+  }
+  
+  
+.card-container:hover {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.05); /* Aumenta el tamaño del card al pasar el mouse por encima */
+}
+
+.card-image {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del card */
+  height: 300px;
+  object-fit: cover; /* Ajusta la imagen para que se recorte si es necesario */
+}
