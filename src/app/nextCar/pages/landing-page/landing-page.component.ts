@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
+import { MatButtonModule } from '@angular/material/button';
+import { LandingPageCardComponent } from '../../components/landing-page-card/landing-page-card.component';
+import { CommonModule } from '@angular/common';
+import { Producto } from '../../models/products/producto';
 
 
 @Component({
@@ -9,12 +13,15 @@ import { ButtonModule } from 'primeng/button';
   imports: [
     MatDividerModule,
     CarouselModule,
-    ButtonModule
+    ButtonModule,
+    MatButtonModule,
+    LandingPageCardComponent,
+    CommonModule
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {
   public numVisible: number = 3;
-  public products: number[] = [];
+  public products: Producto[] = [];
 }

@@ -1,0 +1,33 @@
+ .product-card {
+    max-width: 500px;
+    display: flex;
+    flex-direction: row; /* Alinea la imagen y el contenido en fila */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 16px; /* Espaciado entre la imagen y el contenido */
+    padding: 16px;
+}
+
+.product-image {
+    width: 200px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados opcionales */
+}
+
+.product-content {
+    flex: 1; /* Ocupa el espacio restante */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 6px; /* Espaciado entre elementos */
+    margin-top: 16px;
+}
+
+.product-grid div {
+    background: #f5f5f5; /* Color de fondo */
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}

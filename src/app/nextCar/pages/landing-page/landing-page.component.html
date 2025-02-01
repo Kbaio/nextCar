@@ -1,8 +1,13 @@
 <h2 style="margin-left: 20px;">Tendencias</h2>
+<section>
+  <div class="botton-container">
+    <button mat-raised-button>Ver todos</button>
+  </div>
+</section>
 <p-carousel [value]="products" [numVisible]="numVisible" [numScroll]="1" [circular]="true" [autoplayInterval]="10000">
   <ng-template pTemplate="item" let-item>
     <div class="carousel-item">
-    <!-- <app-featured-card [product]="item"></app-featured-card> -->
+    <app-landing-page-card [product]="item"></app-landing-page-card>
     </div>
   </ng-template>
 </p-carousel>
@@ -14,5 +19,5 @@
 <div class="category-cards">
 <!-- <app-category-card *ngFor="let item of categories" [category]="item" (categorySelected)="onCategorySelected($event)"></app-category-card> -->
 </div>
-
 <br>
+<app-landing-page-card></app-landing-page-card>
