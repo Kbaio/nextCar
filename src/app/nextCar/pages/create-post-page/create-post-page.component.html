@@ -1,5 +1,73 @@
-<p>create-post-page works!</p>
+<form class="example-form">
+    <div class="image-upload-container">
+        <div class="image-preview">
+          <img *ngIf="imageUrl" [src]="imageUrl" alt="Imagen seleccionada">
+          <span class="placeholder-text" *ngIf="!imageUrl">IMG</span>
+        </div>
+        <input type="file" #fileInput (change)="onFileSelected($event)" accept="image/*" hidden>
+        <mat-icon class="edit-button" (click)="triggerFileInput()">edit</mat-icon>
+      </div>     
+      
+    <!-- Campo Modelo -->
+    <div class="form-row">
+      <span class="form-label">Modelo:</span>
+      <mat-form-field appearance="outline" class="form-field">
+        <input type="text" matInput [formControl]="modeloFormControl" [errorStateMatcher]="matcher" placeholder="Ingrese el modelo">
+        <mat-error *ngIf="modeloFormControl.hasError('required')">
+          El modelo debe <strong>completarse.</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  
+    <!-- Campo Descripción -->
+    <div class="form-row">
+      <span class="form-label">Descripción:</span>
+      <mat-form-field appearance="outline" class="form-field">
+        <input type="text" matInput [formControl]="descripcionFormControl" [errorStateMatcher]="matcher" placeholder="Ingrese una descripción">
+        <mat-error *ngIf="descripcionFormControl.hasError('required')">
+          La descripción debe <strong>completarse.</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  
+    <!-- Campo Año -->
+    <div class="form-row">
+      <span class="form-label">Año:</span>
+      <mat-form-field appearance="outline" class="form-field">
+        <!-- Para el año, usamos type="text" para evitar spinners -->
+        <input type="text" inputmode="numeric" matInput [formControl]="yearFormControl" [errorStateMatcher]="matcher" placeholder="Ingrese el año">
+        <mat-error *ngIf="yearFormControl.hasError('required')">
+          El año debe <strong>completarse.</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  
+    <!-- Campo Marca -->
+    <div class="form-row">
+      <span class="form-label">Marca:</span>
+      <mat-form-field appearance="outline" class="form-field">
+        <input type="text" matInput [formControl]="marcaFormControl" [errorStateMatcher]="matcher" placeholder="Ingrese la marca">
+        <mat-error *ngIf="marcaFormControl.hasError('required')">
+          La marca debe <strong>completarse.</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  
+    <!-- Campo Precio -->
+    <div class="form-row">
+      <span class="form-label">Precio:</span>
+      <mat-form-field appearance="outline" class="form-field">
+        <!-- Para precio, usamos type="text" con inputmode="numeric" -->
+        <input type="text" inputmode="numeric" matInput [formControl]="precioFormControl" [errorStateMatcher]="matcher" placeholder="Ingrese el precio">
+        <mat-error *ngIf="precioFormControl.hasError('required')">
+          El precio debe <strong>completarse.</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
 
-<H2>HOLA MUNDO</H2>
-
-hola
+    <div class="button-container">
+        <button class="cancel-button" (click)="onCancel()">Cancelar</button>
+        <button class="confirm-button" (click)="onConfirm()">Confirmar</button>
+      </div>
+      
+  </form>  
