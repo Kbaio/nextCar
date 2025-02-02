@@ -1,23 +1,112 @@
-
+.image-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px; /* Aumentado el tamaño */
+    height: 350px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f9f9f9;
+    position: relative;
+    margin: 0 auto 20px; /* Centrado y con margen inferior */
+  }
+  
+.image-preview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+.placeholder-text {
+    color: #888;
+    font-size: 16px;
+  }
+  
+.edit-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+.edit-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }  
+  
 .example-form {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 1rem;
   }
   
-  .form-row {
+.form-row {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
     flex-wrap: wrap;
   }
   
-  .form-label {
+.form-label {
     font-weight: bold;
     margin-right: 1rem;
     width: 100px; /* Para alinear los textos */
   }
   
-  .form-field {
+.form-field {
     flex: 1;
+  }  
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre botones */
+    margin-top: 20px;
   }
+  
+.cancel-button,
+.confirm-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+.cancel-button {
+    border-color: red;
+    color: red;
+  }
+  
+.cancel-button:hover {
+    background-color: red;
+    color: white;
+  }
+  
+.confirm-button {
+    border-color: green;
+    color: green;
+  }
+  
+.confirm-button:hover {
+    background-color: green;
+    color: white;
+  }
+  
