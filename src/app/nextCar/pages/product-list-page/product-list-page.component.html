@@ -1,2 +1,5 @@
-<p>product-list-page works!</p>
-
+<div *ngFor="let product of filteredProducts">
+    <h3>{{ product.nombre }}</h3>
+    <p>{{ product.descripcion }}</p>
+    <p>{{ product.precio }}</p>
+  </div>

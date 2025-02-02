@@ -20,7 +20,7 @@ export const routes: Routes = [
             { path: 'product-list', component: ProductListPageComponent },
             { path: 'product-list/:id', component: ProductPageComponent },
             { path: 'wishlist', component:EditarPostComponent  },
-            { path: 'profile', component: ProfilePageComponent },
+            { path: 'profile/:id', component: ProfilePageComponent },
             { path: 'create-post', component: CreatePostPageComponent },
             { path: '**', redirectTo: 'landing',  }, 
         ]

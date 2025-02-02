@@ -18,5 +18,9 @@ export class ProductosTsService {
   getProductById(id: number): Observable<Producto> {
     return this.http.get<Producto>(`${this.baseUrl}/productos/${id}`);
   }
+
+  createProduct(product: Producto): Observable<Producto> {
+    return this.http.post<Producto>(`${this.baseUrl}/productos`, product);
+  }
   
 }

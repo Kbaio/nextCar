@@ -1,3 +1,4 @@
+import { FilterService } from './../../services/filter.service';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatDividerModule } from '@angular/material/divider';
@@ -28,7 +29,10 @@ export class LandingPageComponent {
   public numVisible: number = 3;
   public products: Producto[] = [];
 
-  constructor(private servicioProducto: ProductosTsService ) { }
+  constructor(
+              private servicioProducto: ProductosTsService,
+              private filterService: FilterService
+            ) { }
 
   ngOnInit(): void {
     this.servicioProducto.getProducts().subscribe( products => {
@@ -36,4 +40,13 @@ export class LandingPageComponent {
       console.log(this.products);
     });
   }
+
+  onPriceChange(priceRange: number[]) {
+    this.filterService.setPriceRange(priceRange);
+  }
+
+
+
+
+
 }

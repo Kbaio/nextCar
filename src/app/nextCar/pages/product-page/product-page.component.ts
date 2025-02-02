@@ -3,7 +3,7 @@ import { ProductCardComponent } from "../../components/product-card/product-card
 
 @Component({
   selector: 'app-product-page',
-  imports: [ProductCardComponent],
+  imports: [],
   templateUrl: './product-page.component.html',
   styleUrl: './product-page.component.scss'
 })
