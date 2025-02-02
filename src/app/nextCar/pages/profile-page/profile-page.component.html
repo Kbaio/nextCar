@@ -1,1 +1,42 @@
-<p>profile-page works!</p>
+<mat-card class="profile-card" appearance="outlined">
+    <mat-card-title>Mi Perfil</mat-card-title>
+    <mat-card-content>
+      <div class="profile-container">
+        <!-- Contenedor Izquierdo (Etiquetas y Líneas) -->
+        <div class="profile-info">
+          <div class="profile-field">
+            <label>Correo:</label>
+            <mat-divider></mat-divider>
+          </div>
+  
+          <div class="profile-field">
+            <label>Nombre:</label>
+            <mat-divider></mat-divider>
+          </div>
+  
+          <div class="profile-field">
+            <label>Teléfono:</label>
+            <mat-divider></mat-divider>
+          </div>
+        </div>
+  
+        <!-- Contenedor Derecho (Enlaces) -->
+        <div class="profile-actions">
+          <a href="#" class="profile-action">Cambiar Contraseña</a>
+          <a href="#" class="profile-action">Administrar Usuarios</a>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="grid-container">
+    <mat-card *ngFor="let item of items" class="grid-item">
+      <mat-card-title>Titulo</mat-card-title>
+      <mat-card-content>Contenido</mat-card-content>
+    </mat-card>
+  </div>
+  
+  
+  
+  
+  
