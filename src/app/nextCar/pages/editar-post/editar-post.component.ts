@@ -6,6 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { Router } from '@angular/router';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -32,6 +33,7 @@ export class EditarPostComponent {
   imageUrl: string | ArrayBuffer | null = null;
 
   @ViewChild('fileInput', { static: false }) fileInput!: ElementRef;
+  constructor(private router: Router) {}
 
   triggerFileInput() {
     this.fileInput.nativeElement.click();
