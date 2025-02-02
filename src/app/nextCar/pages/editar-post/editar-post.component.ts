@@ -54,8 +54,8 @@ export class EditarPostComponent {
   }
 
   onCancel() {
-    console.log("Acción cancelada");
-    // Aquí podrías redirigir o limpiar el formulario si es necesario
+    // Redirige a la página de inicio o a la ruta deseada
+    this.router.navigate(['/home']); // Cambia la ruta según sea necesario
   }
   
   onConfirm() {
