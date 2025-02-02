@@ -14,7 +14,23 @@
 
 <mat-divider></mat-divider>
 <br>
-<h2 style="margin-left: 20px;">Categorias</h2>
+
+<!-- Esto es la parte de categorias-->
+<mat-card class="categorias-container">
+  <mat-card-title>Categorías</mat-card-title>
+
+  <mat-chip-set class="category-set">
+    <mat-chip *ngFor="let cat of categories">{{cat}}</mat-chip>
+  </mat-chip-set>
+
+</mat-card>
+
+
+
+
+
+
+<!-- ESto es parte del codigo que ya se tenia, no lo quise eliminar por si acaso-->
 <div class="category-cards">
 <!-- <app-category-card *ngFor="let item of categories" [category]="item" (categorySelected)="onCategorySelected($event)"></app-category-card> -->
 </div>
