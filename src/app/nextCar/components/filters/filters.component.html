@@ -1,41 +1,37 @@
-<br>
-<div>
-  <h6>Precio</h6>
-  <p-slider [(ngModel)]="priceRange" 
-    [min]="0" [max]="maxPrice" 
-    [range]="true"
-    (onChange)="onPriceChange($event)">
-  </p-slider>
+<mat-card class="filterCard"appearance="outlined">
+  <br>
   <div>
-    <span> ${{ priceRange[0] }} - ${{ priceRange[1] }}</span>
+    <h3>Precio</h3>
+    <mat-slider
+        class="example-margin"
+        [max]="maxPrice"
+        [min]="0"
+        [step]="1"
+        [discrete]="false"
+        [showTickMarks]="true">
+      <input matSliderThumb [(ngModel)]="maxPrice" #slider>
+    </mat-slider>
+    <div>
+      <span> ${{ priceRange[0] }} - ${{ priceRange[1] }}</span>
+    </div>
   </div>
-</div>
-<br>
+  <br>
 
-<br>
-<div>
-  <h6>Categorías</h6>
-  <div *ngFor="let category of categories" class="category-container">
-    <p-checkbox 
-      [inputId]="category" 
-      [(ngModel)]="selectedCategories" 
-      binary="true" 
-      (onChange)="onCategoryChange(category)">
-    </p-checkbox>
-    <label [for]="category">{{ category }}</label>
+
+  <br>
+  <div>
+    <h3>Categorías</h3>
+    <div *ngFor="let category of categories" class="category-container">
+      <label [for]="category">{{ category }}</label>
+    </div>
   </div>
-</div>
-<br>
+  <br>
 
-<br>
-<h6>Marcas</h6>
-<div *ngFor="let brand of brands" class="brand-container">
-  <p-checkbox 
-    [inputId]="brand" 
-    [(ngModel)]="selectedBrands" 
-    binary="true" 
-    (onChange)="onBrandChange(brand)">
-  </p-checkbox>
-  <label [for]="brand">{{ brand }}</label>
-</div>
-<br>
+  <br>
+  <h3>Marcas</h3>
+  <div *ngFor="let brand of brands" class="brand-container">
+    <label [for]="brand">{{ brand }}</label>
+  </div>
+  <br>
+
+</mat-card>

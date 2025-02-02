@@ -28,6 +28,7 @@ import { ProductosTsService } from '../../services/productos.ts.service';
 export class LandingPageComponent {
   public numVisible: number = 3;
   public products: Producto[] = [];
+  public categorias: string[] = [] 
 
   constructor(
               private servicioProducto: ProductosTsService,
@@ -37,13 +38,15 @@ export class LandingPageComponent {
   ngOnInit(): void {
     this.servicioProducto.getProducts().subscribe( products => {
       this.products = products;
-      console.log(this.products);
+      //TODO: llamado a funcion de filtrado
     });
   }
 
   onPriceChange(priceRange: number[]) {
     this.filterService.setPriceRange(priceRange);
   }
+
+  //TODO:Funcion de filtrado
 
 
 

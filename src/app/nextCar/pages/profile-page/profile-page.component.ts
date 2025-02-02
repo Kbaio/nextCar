@@ -5,10 +5,11 @@ import { MatListModule } from '@angular/material/list';
 import { Producto } from '../../models/products/producto';
 import { PublicacionTsService } from '../../services/publicacion.ts.service';
 import { Publicacion } from '../../models/products/publicacion';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-profile-page',
-  imports: [MatCardModule, MatListModule, MatDividerModule],
+  imports: [MatCardModule, MatListModule, MatDividerModule, CommonModule],
   templateUrl: './profile-page.component.html',
   styleUrl: './profile-page.component.scss'
 })
