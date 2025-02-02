@@ -1,1 +1,41 @@
-<p>filters works!</p>
+<br>
+<div>
+  <h6>Precio</h6>
+  <p-slider [(ngModel)]="priceRange" 
+    [min]="0" [max]="maxPrice" 
+    [range]="true"
+    (onChange)="onPriceChange($event)">
+  </p-slider>
+  <div>
+    <span> ${{ priceRange[0] }} - ${{ priceRange[1] }}</span>
+  </div>
+</div>
+<br>
+
+<br>
+<div>
+  <h6>Categorías</h6>
+  <div *ngFor="let category of categories" class="category-container">
+    <p-checkbox 
+      [inputId]="category" 
+      [(ngModel)]="selectedCategories" 
+      binary="true" 
+      (onChange)="onCategoryChange(category)">
+    </p-checkbox>
+    <label [for]="category">{{ category }}</label>
+  </div>
+</div>
+<br>
+
+<br>
+<h6>Marcas</h6>
+<div *ngFor="let brand of brands" class="brand-container">
+  <p-checkbox 
+    [inputId]="brand" 
+    [(ngModel)]="selectedBrands" 
+    binary="true" 
+    (onChange)="onBrandChange(brand)">
+  </p-checkbox>
+  <label [for]="brand">{{ brand }}</label>
+</div>
+<br>

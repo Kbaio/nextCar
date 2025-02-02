@@ -1,26 +1,21 @@
-import { ProductosTsService } from './../../services/productos.ts.service';
-import { Component } from '@angular/core';
+// filepath: /c:/Users/David/OneDrive - Estudiantes ITCR/TEC/Verano - 2024/Requerimientos/nextCar/src/app/nextCar/pages/product-list-page/product-list-page.component.ts
+import { Component, OnInit } from '@angular/core';
+import { FilterService } from '../../services/filter.service';
 import { Producto } from '../../models/products/producto';
 
 @Component({
   selector: 'app-product-list-page',
-  imports: [],
   templateUrl: './product-list-page.component.html',
-  styleUrl: './product-list-page.component.scss'
+  styleUrls: ['./product-list-page.component.scss']
 })
-export class ProductListPageComponent {
-  products: Producto[] = [];
+export class ProductListPageComponent implements OnInit {
   filteredProducts: Producto[] = [];
-  priceRange: number[] = [0, 1000];
-  categories: string[] = [];
-  selectedCategories: string[] = [];
-  maxPrice: number = 0;
-  brands: string[] = [];
-  selectedBrands: string[] = [];
 
-  constructor (private productosService: ProductosTsService) { }
+  constructor(private filterService: FilterService) {}
 
-
-  
-
+  ngOnInit() {
+    this.filterService.filteredProducts$.subscribe((products) => {
+      this.filteredProducts = products;
+    });
+  }
 }

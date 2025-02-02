@@ -1,29 +1,39 @@
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav class="sidenav-body" #sidenav mode="side" position="end" [opened]="false" (openedChange)="isSidebarOpen = $event">
-      <h2 class="sidenav-header">Menu de Opciones</h2>
-      <mat-nav-list>
-        <a mat-list-item routerLink="/auth/login">
-          Iniciar Sesion / Registrate
-          <mat-icon>login</mat-icon>
-        </a>
-        <a mat-list-item routerLink="profile">Mi Perfil</a>
-        <a mat-list-item routerLink="wishlist">Mi Wishlist</a>
-        <a mat-list-item routerLink="create-post">Crear Post</a>
-        <a mat-list-item routerLink="product-list">Productos</a>
-      </mat-nav-list>
-      <div *ngIf="isSidebarOpen && isProductListPage()">
-        <h3>Opciones de Filtrado</h3>
-      </div>
+  <mat-sidenav class="sidenav-body" #sidenav mode="side" position="end" [opened]="false" (openedChange)="isSidebarOpen = $event">
+    <h2 class="sidenav-header">Menu de Opciones</h2>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/auth/login">
+        Iniciar Sesion / Registrate
+        <mat-icon>login</mat-icon>
+      </a>
+      <a mat-list-item routerLink="profile">Mi Perfil</a>
+      <a mat-list-item routerLink="wishlist">Mi Wishlist</a>
+      <a mat-list-item routerLink="create-post">Crear Post</a>
+      <a mat-list-item routerLink="product-list">Productos</a>
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+    <div *ngIf="isProductListPage()">
+      <h3 class="filter-container">Opciones de Filtrado</h3>
+      <app-filters 
+        [priceRange]="priceRange"
+        [maxPrice]="maxPrice"
+        [categories]="categories"
+        [selectedCategories]="selectedCategories"
+        [brands]="brands"
+        [selectedBrands]="selectedBrands"
+        (priceChange)="onPriceChange($event)"
+        (categoryChange)="onCategoryChange($event)"
+        (brandChange)="onBrandChange($event)">
+      </app-filters>
+    </div>
+  </mat-sidenav>
 
-
-    </mat-sidenav>
-  
-    <mat-sidenav-content>
-      <div>
-        <app-nav-bar [isSidebarOpen]="isSidebarOpen" (toggleSidebar)="sidenav.toggle()"></app-nav-bar>
-      </div>
-      <div class="content">
-        <router-outlet></router-outlet>
-      </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+  <mat-sidenav-content>
+    <div>
+      <app-nav-bar [isSidebarOpen]="isSidebarOpen" (toggleSidebar)="sidenav.toggle()"></app-nav-bar>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

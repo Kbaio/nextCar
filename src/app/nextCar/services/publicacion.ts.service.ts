@@ -14,4 +14,12 @@ export class PublicacionTsService {
   getPublicaciones(): Observable<Publicacion[]> {
     return this.http.get<Publicacion[]>(`${this.baseUrl}/publicaciones`);
   }
+
+  getPublicacionById(id: number): Observable<Publicacion> {
+    return this.http.get<Publicacion>(`${this.baseUrl}/publicaciones/${id}`);
+  }
+
+  createPublicacion(publicacion: Publicacion): Observable<Publicacion> {
+    return this.http.post<Publicacion>(`${this.baseUrl}/publicaciones`, publicacion);
+  }
 }
