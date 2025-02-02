@@ -6,6 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { Router } from '@angular/router'; 
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -33,6 +34,8 @@ export class CreatePostPageComponent {
 
   @ViewChild('fileInput', { static: false }) fileInput!: ElementRef;
 
+  constructor(private router: Router) {}
+
   triggerFileInput() {
     this.fileInput.nativeElement.click();
   }
@@ -52,13 +55,12 @@ export class CreatePostPageComponent {
   }
 
   onCancel() {
-    console.log("Acción cancelada");
-    // Aquí podrías redirigir o limpiar el formulario si es necesario
+    // Redirige a la página de inicio o a la ruta deseada
+    this.router.navigate(['/home']); // Cambia la ruta según sea necesario
   }
   
   onConfirm() {
     console.log("Acción confirmada");
     // Aquí puedes agregar la lógica para guardar la información
   }
-  
 }
