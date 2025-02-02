@@ -1,0 +1,23 @@
+
+.example-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    margin-right: 1rem;
+    width: 100px; /* Para alinear los textos */
+  }
+  
+  .form-field {
+    flex: 1;
+  }

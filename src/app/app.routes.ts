@@ -1,6 +1,7 @@
 import { LoginComponent } from './auth/pages/login/login.component';
 import { RegisterComponent } from './auth/pages/register/register.component';
 import { CreatePostPageComponent } from './nextCar/pages/create-post-page/create-post-page.component';
+import { EditarPostComponent } from './nextCar/pages/editar-post/editar-post.component';
 import { LandingPageComponent } from './nextCar/pages/landing-page/landing-page.component';
 import { LayoutPageComponent } from './nextCar/pages/layout-page/layout-page.component';
 import { ProductListPageComponent } from './nextCar/pages/product-list-page/product-list-page.component';
@@ -18,7 +19,7 @@ export const routes: Routes = [
             { path: 'landing', component: LandingPageComponent },
             { path: 'product-list', component: ProductListPageComponent },
             { path: 'product-list/:id', component: ProductPageComponent },
-            { path: 'wishlist', component: WishlistPageComponent },
+            { path: 'wishlist', component:EditarPostComponent  },
             { path: 'profile', component: ProfilePageComponent },
             { path: 'create-post', component: CreatePostPageComponent },
             { path: '**', redirectTo: 'landing',  }, 
