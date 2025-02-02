@@ -248,6 +248,17 @@
         "imagen": "https://chevroletcr.com/blog/wp-content/uploads/2024/07/chevrolet-costa-rica-01.jpg",
         "categoria": "SUV",
         "tipo": "Usado"
+        },
+        {
+        "id": 17,
+        "marca": "Subaru",
+        "modelo": "Outback",
+        "anio": 2019,
+        "precio": 27000,
+        "descripcion": "A versatile SUV",
+        "imagen": "https://cdn.pixabay.com/photo/2016/03/31/20/01/auto-1295461_1280.png",
+        "categoria": "Bueno",
+        "tipo": "Usado"
         }
     ],
     "comentarios": [
