@@ -1,5 +1,13 @@
-
 <form class="example-form">
+    <div class="image-upload-container">
+        <div class="image-preview">
+          <img *ngIf="imageUrl" [src]="imageUrl" alt="Imagen seleccionada">
+          <span class="placeholder-text" *ngIf="!imageUrl">IMG</span>
+        </div>
+        <input type="file" #fileInput (change)="onFileSelected($event)" accept="image/*" hidden>
+        <mat-icon class="edit-button" (click)="triggerFileInput()">edit</mat-icon>
+      </div>     
+      
     <!-- Campo Modelo -->
     <div class="form-row">
       <span class="form-label">Modelo:</span>
@@ -15,7 +23,7 @@
     <div class="form-row">
       <span class="form-label">Descripción:</span>
       <mat-form-field appearance="outline" class="form-field">
-        <input type="text" matInput [formControl]="descripcionFormControl" [errorStateMatcher]="matcher" placeholder="Ingrese  descripción">
+        <input type="text" matInput [formControl]="descripcionFormControl" [errorStateMatcher]="matcher" placeholder="Ingrese una descripción">
         <mat-error *ngIf="descripcionFormControl.hasError('required')">
           La descripción debe <strong>completarse.</strong>
         </mat-error>
@@ -56,4 +64,10 @@
         </mat-error>
       </mat-form-field>
     </div>
-  </form>
+
+    <div class="button-container">
+        <button class="cancel-button" (click)="onCancel()">Cancelar</button>
+        <button class="confirm-button" (click)="onConfirm()">Confirmar</button>
+      </div>
+      
+  </form>  
