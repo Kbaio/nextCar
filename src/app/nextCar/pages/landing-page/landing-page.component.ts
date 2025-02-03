@@ -45,9 +45,6 @@ export class LandingPageComponent {
     });
   }
 
-  onPriceChange(priceRange: number[]) {
-    this.filterService.setPriceRange(priceRange);
-  }
 
   //Funcion para llenar el set de categorias
   fillCategories() {

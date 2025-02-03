@@ -39,52 +39,11 @@ import { CommonModule } from '@angular/common';
 export class LayoutPageComponent {
 
   isSidebarOpen: boolean = false;
-  priceRange: number[] = [0, 1000];
-
-  maxPrice: number = 1000;
-  categories: string[] = ['Electronics', 'Books', 'Clothing', 'Toys'];
-
-  selectedCategories: string[] = [];
-  brands: string[] = ['BrandA', 'BrandB', 'BrandC'];
-
-  selectedBrands: string[] = [];
-
 
   //TODO: Implementar el filtro para brands y productos
   constructor(
     private router: Router,
-    private filterService: FilterService,
-    private productosService: ProductosTsService
   ) {}
-
-  ngOnInit() {
-    this.loadProducts();
-  }
-
-  //Cargar productos
-  loadProducts() {
-    this.productosService.getProducts().subscribe(products => {
-      this.filterService.setProducts(products);
-      this.extractCategoriesAndBrands(products);
-    });
-  }
-
-  extractCategoriesAndBrands(products: any[]) {
-    const categoriesSet = new Set<string>();
-    const brandsSet = new Set<string>();
-
-    products.forEach(product => {
-      if (product.category) {
-        categoriesSet.add(product.category);
-      }
-      if (product.brand) {
-        brandsSet.add(product.brand);
-      }
-    });
-
-    this.categories = Array.from(categoriesSet);
-    this.brands = Array.from(brandsSet);
-  }
 
   //Cambiar estado del sidebar
   toggleSidenav() {
@@ -96,32 +55,4 @@ export class LayoutPageComponent {
     return this.router.url.includes('product-list');
   }
 
-  //Cuando se cambia el precio
-  onPriceChange(priceRange: number[]) {
-    this.filterService.setPriceRange(priceRange);
-  }
-
-  //Cuando se cambia la categoria
-  onCategoryChange(category: string) {
-    const selectedCategories = this.filterService.selectedCategoriesSource.getValue();
-    const index = selectedCategories.indexOf(category);
-    if (index === -1) {
-      selectedCategories.push(category);
-    } else {
-      selectedCategories.splice(index, 1);
-    }
-    this.filterService.setSelectedCategories(selectedCategories);
-  }
-
-  //Cuando se cambia la marca
-  onBrandChange(brand: string) {
-    const selectedBrands = this.filterService.selectedBrandsSource.getValue();
-    const index = selectedBrands.indexOf(brand);
-    if (index === -1) {
-      selectedBrands.push(brand);
-    } else {
-      selectedBrands.splice(index, 1);
-    }
-    this.filterService.setSelectedBrands(selectedBrands);
-  }
 }

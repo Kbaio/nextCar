@@ -1,56 +1,83 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { Producto } from '../models/products/producto';
+import { ProductosTsService } from './productos.ts.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FilterService {
-  private productsSource = new BehaviorSubject<Producto[]>([]);
-  private filteredProductsSource = new BehaviorSubject<Producto[]>([]);
-  private priceRangeSource = new BehaviorSubject<number[]>([0, 1000]);
-  public selectedCategoriesSource = new BehaviorSubject<string[]>([]);
-  public selectedBrandsSource = new BehaviorSubject<string[]>([]);
+  public priceRange: number[] = [0, 1000];
+  public maxPrice: number = 1000;
 
-  products$ = this.productsSource.asObservable();
-  filteredProducts$ = this.filteredProductsSource.asObservable();
-  priceRange$ = this.priceRangeSource.asObservable();
-  selectedCategories$ = this.selectedCategoriesSource.asObservable();
-  selectedBrands$ = this.selectedBrandsSource.asObservable();
+  public categories: string[] = [];
+  public selectedCategories: string[] = [];
 
-  setProducts(products: Producto[]) {
-    this.productsSource.next(products);
-    this.applyFilters();
+  public brands: string[] = [];
+  public selectedBrands: string[] = [];
+
+  public priceChange: Subject<number[]> = new Subject<number[]>();
+  public categoryChange: Subject<string[]> = new Subject<string[]>();
+  public brandChange: Subject<string[]> = new Subject<string[]>();
+
+  public categoriesSubject: BehaviorSubject<string[]> = new BehaviorSubject<string[]>([]);
+  public brandsSubject: BehaviorSubject<string[]> = new BehaviorSubject<string[]>([]);
+  public maxPriceSubject: BehaviorSubject<number> = new BehaviorSubject<number>(1000);
+
+  constructor(private productosService: ProductosTsService) {
+    this.loadProducts();
   }
 
-  setPriceRange(priceRange: number[]) {
-    this.priceRangeSource.next(priceRange);
-    this.applyFilters();
+  private loadProducts(): void {
+    this.productosService.getProducts().subscribe(products => {
+      this.fillCategoriesAndBrands(products);
+    });
   }
 
-  setSelectedCategories(categories: string[]) {
-    this.selectedCategoriesSource.next(categories);
-    this.applyFilters();
-  }
+  private fillCategoriesAndBrands(products: Producto[]): void {
+    const categoriesSet = new Set<string>();
+    const brandsSet = new Set<string>();
+    let maxProductPrice = 0;
 
-  setSelectedBrands(brands: string[]) {
-    this.selectedBrandsSource.next(brands);
-    this.applyFilters();
-  }
-
-  private applyFilters() {
-    const products = this.productsSource.getValue();
-    const priceRange = this.priceRangeSource.getValue();
-    const selectedCategories = this.selectedCategoriesSource.getValue();
-    const selectedBrands = this.selectedBrandsSource.getValue();
-
-    const filteredProducts = products.filter(product => {
-      const matchesPrice = product.precio >= priceRange[0] && product.precio <= priceRange[1];
-      const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(product.categoria);
-      const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(product.marca);
-      return matchesPrice && matchesCategory && matchesBrand;
+    products.forEach(product => {
+      categoriesSet.add(product.categoria);
+      brandsSet.add(product.marca);
+      if (product.precio > maxProductPrice) {
+        maxProductPrice = product.precio;
+      }
     });
 
-    this.filteredProductsSource.next(filteredProducts);
+    this.categories = Array.from(categoriesSet);
+    this.brands = Array.from(brandsSet);
+    this.maxPrice = maxProductPrice + 1000;
+
+    this.categoriesSubject.next(this.categories);
+    this.brandsSubject.next(this.brands);
+    this.maxPriceSubject.next(this.maxPrice);
+  }
+
+  public updatePriceRange(priceRange: number[]): void {
+    this.priceRange = priceRange;
+    this.priceChange.next(priceRange);
+  }
+
+  public updateSelectedCategories(category: string): void {
+    const index = this.selectedCategories.indexOf(category);
+    if (index === -1) {
+      this.selectedCategories.push(category);
+    } else {
+      this.selectedCategories.splice(index, 1);
+    }
+    this.categoryChange.next(this.selectedCategories);
+  }
+
+  public updateSelectedBrands(brand: string): void {
+    const index = this.selectedBrands.indexOf(brand);
+    if (index === -1) {
+      this.selectedBrands.push(brand);
+    } else {
+      this.selectedBrands.splice(index, 1);
+    }
+    this.brandChange.next(this.selectedBrands);
   }
 }

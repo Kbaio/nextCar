@@ -19,7 +19,13 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   selector: 'input-error-state-matcher-example',
   templateUrl: './create-post-page.component.html',
   styleUrls: ['./create-post-page.component.scss'],
-  imports: [CommonModule, FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule, MatIconModule, MatButtonModule],
+  imports: [CommonModule, 
+            FormsModule, 
+            MatFormFieldModule, 
+            MatInputModule, 
+            ReactiveFormsModule, 
+            MatIconModule, 
+            MatButtonModule],
 })
 
 export class CreatePostPageComponent {

@@ -14,17 +14,7 @@
     <mat-divider></mat-divider>
     <div *ngIf="isProductListPage()">
       <h3 class="filter-container">Opciones de Filtrado</h3>
-      <app-filters 
-        [priceRange]="priceRange"
-        [maxPrice]="maxPrice"
-        [categories]="categories"
-        [selectedCategories]="selectedCategories"
-        [brands]="brands"
-        [selectedBrands]="selectedBrands"
-        (priceChange)="onPriceChange($event)"
-        (categoryChange)="onCategoryChange($event)"
-        (brandChange)="onBrandChange($event)">
-      </app-filters>
+      <app-filters></app-filters>
     </div>
   </mat-sidenav>
 

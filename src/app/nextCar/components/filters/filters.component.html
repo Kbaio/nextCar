@@ -1,23 +1,22 @@
-<mat-card class="filterCard"appearance="outlined">
+<mat-card class="filterCard" appearance="outlined">
   <br>
   <div>
     <h3>Precio</h3>
     <mat-slider
         class="example-margin"
-        [max]="maxPrice"
+        [max]="priceRange[1]"
         [min]="0"
         [step]="1"
         [discrete]="false"
         [showTickMarks]="true">
-      <input matSliderThumb [(ngModel)]="maxPrice" #slider>
+        <input matSliderThumb [(ngModel)]="maxPrice">
     </mat-slider>
     <div>
       <span> ${{ priceRange[0] }} - ${{ priceRange[1] }}</span>
     </div>
   </div>
   <br>
-
-
+  
   <br>
   <div>
     <h3>Categorías</h3>
