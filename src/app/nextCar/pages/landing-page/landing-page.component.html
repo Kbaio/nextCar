@@ -3,7 +3,14 @@
   <button mat-raised-button class="ver-todos-btn">Ver todos</button>
 </div>
 
-<p-carousel [value]="products" [numVisible]="numVisible" [numScroll]="1" [circular]="true" [autoplayInterval]="10000">
+<p-carousel
+  [value]="products"
+  [numVisible]="numVisible" 
+  [numScroll]="1" 
+  [circular]="true" 
+  [autoplayInterval]="10000"
+  [responsiveOptions]="responsiveOptions">
+  
   <ng-template pTemplate="item" let-item>
     <div class="carousel-item">
      <app-landing-page-card [product]="item"></app-landing-page-card> <!--TODO: Items del carruse sean clickeables y nos lleven a la pagina de detalle del producto -->
@@ -24,14 +31,3 @@
   </mat-chip-set>
 
 </mat-card>
-
-
-
-
-
-
-<!-- ESto es parte del codigo que ya se tenia, no lo quise eliminar por si acaso-->
-<div class="category-cards">
-<!-- TODO <app-category-card *ngFor="let item of categories" [category]="item" (categorySelected)="onCategorySelected($event)"></app-category-card> -->
-</div>
-<br>

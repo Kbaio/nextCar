@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { Producto } from '../../models/products/producto';
-import { CarouselModule } from 'primeng/carousel';
+import { CarouselModule, CarouselResponsiveOptions } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { LandingPageCardComponent } from '../../components/landing-page-card/landing-page-card.component';
 import { ProductosTsService } from '../../services/productos.ts.service';
 import { MatCardModule } from '@angular/material/card';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatChipsModule } from '@angular/material/chips';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
@@ -23,7 +23,6 @@ import { MatChipsModule } from '@angular/material/chips';
     MatCardModule, 
     MatChipsModule
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
@@ -31,6 +30,23 @@ export class LandingPageComponent {
   public numVisible: number = 3;
   public products: Producto[] = [];
   public categories: Set<String> = new Set(); //Un set para guardar las categorias
+  public responsiveOptions: CarouselResponsiveOptions[] = [
+    {
+      breakpoint: '1650px',
+      numVisible: 3, 
+      numScroll: 1
+    },
+    {
+      breakpoint: '1200px',
+      numVisible: 2, 
+      numScroll: 1
+    },
+    {
+      breakpoint: '700px',
+      numVisible: 1, 
+      numScroll: 1
+    }
+  ];
   
   constructor(
               private servicioProducto: ProductosTsService,
@@ -45,15 +61,27 @@ export class LandingPageComponent {
     });
   }
 
-
   //Funcion para llenar el set de categorias
-  fillCategories() {
+  fillCategories(): void {
     for (let prod of this.products) {
       this.categories.add(prod.categoria);
     }
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.updateNumVisible();
+  }
 
+  updateNumVisible() {
+    const width = window.innerWidth;
 
-
+    if (width >= 1650){
+      this.numVisible = 3;
+    } else if (width >= 1200) {
+      this.numVisible = 2;
+    } else {
+      this.numVisible = 1;
+    }
+  }
 }

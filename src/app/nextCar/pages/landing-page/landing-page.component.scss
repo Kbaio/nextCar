@@ -61,3 +61,19 @@
     transform: scale(0.95);
   }
   
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .p-carousel .p-carousel-items {
+    justify-content: center !important;
+  }
+  
+  .p-carousel .p-carousel-content {
+    display: flex;
+    justify-content: center;
+  }
+  
