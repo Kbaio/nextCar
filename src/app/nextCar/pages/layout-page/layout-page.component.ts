@@ -39,8 +39,6 @@ import { CommonModule } from '@angular/common';
 export class LayoutPageComponent {
 
   isSidebarOpen: boolean = false;
-
-  //TODO: Implementar el filtro para brands y productos
   constructor(
     private router: Router,
   ) {}

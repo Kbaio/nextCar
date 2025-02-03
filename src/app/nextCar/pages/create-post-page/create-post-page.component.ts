@@ -16,7 +16,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 }
 
 @Component({
-  selector: 'input-error-state-matcher-example',
+  selector: 'app-create-post',
   templateUrl: './create-post-page.component.html',
   styleUrls: ['./create-post-page.component.scss'],
   imports: [CommonModule, 
