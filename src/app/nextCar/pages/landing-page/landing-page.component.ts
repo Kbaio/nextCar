@@ -10,6 +10,7 @@ import { ProductosTsService } from '../../services/productos.ts.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
@@ -22,6 +23,7 @@ import { Component, HostListener } from '@angular/core';
     CommonModule,
     MatCardModule, 
     MatChipsModule
+    
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
@@ -48,16 +50,15 @@ export class LandingPageComponent {
     }
   ];
   
-  constructor(
-              private servicioProducto: ProductosTsService,
-              private filterService: FilterService
-            ) { }
+  constructor(private servicioProducto: ProductosTsService,
+              private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.servicioProducto.getProducts().subscribe( products => {
       this.products = products;
-      this.fillCategories(); //Aqui llamo a la funcion para llenar el set de categorias
       console.log(this.products);
+      this.fillCategories(); // Llama a la función para llenar las categorías
     });
   }
 
@@ -65,6 +66,15 @@ export class LandingPageComponent {
   fillCategories(): void {
     for (let prod of this.products) {
       this.categories.add(prod.categoria);
+  }
+}
+
+  navigateToProductList(category?: string) {
+    // Logic to navigate to the product list page with the selected category
+    if (category) {
+      this.router.navigate(['product-list'], { queryParams: { category } });
+    } else {
+      this.router.navigate(['/home/product-list']);
     }
   }
 

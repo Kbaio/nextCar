@@ -16,7 +16,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 }
 
 @Component({
-  selector: 'input-error-state-matcher-example',
+  selector: 'app-editar-post',
   templateUrl: './editar-post.component.html',
   styleUrls: ['./editar-post.component.scss'],
   imports: [CommonModule, FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule, MatIconModule, MatButtonModule],

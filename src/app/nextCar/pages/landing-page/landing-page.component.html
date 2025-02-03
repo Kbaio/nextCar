@@ -1,6 +1,6 @@
 <div class="tendencias-header">
   <h2>Tendencias</h2>
-  <button mat-raised-button class="ver-todos-btn">Ver todos</button>
+  <button mat-raised-button class="ver-todos-btn" (click)="navigateToProductList()">Ver todos</button>
 </div>
 
 <p-carousel
@@ -13,21 +13,18 @@
   
   <ng-template pTemplate="item" let-item>
     <div class="carousel-item">
-     <app-landing-page-card [product]="item"></app-landing-page-card> <!--TODO: Items del carruse sean clickeables y nos lleven a la pagina de detalle del producto -->
+     <app-landing-page-card [product]="item"></app-landing-page-card>
     </div>
   </ng-template>
-</p-carousel>
+</p-carousel> 
 <br>
 
 <mat-divider></mat-divider>
 <br>
 
-<!-- Esto es la parte de categorias-->
 <mat-card class="categorias-container">
   <mat-card-title>Categorías</mat-card-title>
-
   <mat-chip-set class="category-set">
     <mat-chip *ngFor="let cat of categories">{{cat}}</mat-chip>
   </mat-chip-set>
-
 </mat-card>

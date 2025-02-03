@@ -16,7 +16,6 @@ import { FilterService } from '../../services/filter.service';
     FormsModule,
     CheckboxModule,
     MatSliderModule,
-    CreatePostPageComponent,
     MatCardModule
   ],
   templateUrl: './filters.component.html',
@@ -50,9 +49,9 @@ export class FiltersComponent implements OnInit {
 
     this.filterService.maxPriceSubject.subscribe(maxPrice => {
       this.maxPrice = maxPrice;
+      this.priceRange[1] = maxPrice;
     });
-
-    this.priceRange = this.filterService.priceRange;
+    console.log(this.priceRange);
   }
 
   onPriceChange(event: any) {
