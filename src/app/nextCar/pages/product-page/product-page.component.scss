@@ -1,0 +1,154 @@
+.product-container {
+    max-width: 700px; /* Aumenta el tamaño */
+    width: 80%;
+    margin: auto;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.product-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+  
+.image-container {
+    width: 350px;
+    height: 350px;
+    border: 2px dashed #5e5d5d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+  
+.product-details p {
+    margin: 35px 0; 
+    font-size: 1.15rem; 
+}
+
+.rating-seller {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+  
+.stars mat-icon {
+    color: #FFD700;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.stars .selected {
+    color: #FFA500;
+}
+
+.seller {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+hr {
+    border: 0;
+    height: 3px;
+    background: #ccc;
+    margin: 30px 0;
+}
+  
+.buttons-container {
+    position: absolute;
+    top: 20px; /* Ajusta esta distancia desde la parte superior */
+    right: 80px; /* Ajusta esta distancia desde la derecha */
+    display: flex;
+    gap: 25px; /* Espacio entre los botones */
+    z-index: 10; /* Asegura que los botones estén al frente */
+}
+  
+button {
+    border-radius: 10px;
+    padding: 15px 15px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+  
+.modify-btn {
+    background: #FFD700;
+    color: black;
+}
+  
+.delete-btn {
+    background: #FF6347;
+    color: rgb(0, 0, 0);
+}
+  
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+  
+.contact-btn {
+    background: #90EE90;
+    color: black;
+}
+  
+.wishlist-btn {
+    background: #FFD700;
+    color: black;
+}
+  
+.comment-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.comment-section input {
+    width: 80%;
+    height: 50px; /* Aumenté la altura */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    resize: vertical; /* Permite redimensionar */
+}
+
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.expand-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.expand-icon {
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.expand-icon.rotated {
+    transform: rotate(180deg);
+}
+
+.comments-list {
+    margin-top: 10px;
+    text-align: center;
+}

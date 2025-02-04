@@ -1,1 +1,57 @@
-<p>product-page works!</p>
+<div class="product-container">
+    <div class="buttons-container">
+      <button class="modify-btn">Modificar</button>
+      <button class="delete-btn">Eliminar</button>
+    </div>
+  
+    <div class="product-header">
+      <div class="image-container">
+        <span>IMG producto</span>
+      </div>
+  
+      <div class="product-details">
+        <p><strong>Modelo:</strong> {{ product.model }}</p>
+        <p><strong>Descripción:</strong> {{ product.description }}</p>
+        <p><strong>Año:</strong> {{ product.year }}</p>
+        <p><strong>Precio:</strong> {{ product.price }}</p>
+        <p><strong>Marca:</strong> {{ product.brand }}</p>
+      </div>
+    </div>
+  
+    <div class="rating-seller">
+      <div class="rating">
+        <span>Rating:</span>
+        <span class="stars">
+          <mat-icon *ngFor="let star of [1,2,3,4,5]" (click)="rate(star)" [ngClass]="{'selected': star <= userRating}">star</mat-icon>
+        </span>
+      </div>
+      <div class="seller">
+        <span><strong>Vendedor:</strong> {{ product.seller }}</span>
+      </div>
+    </div>
+  
+    <div class="action-buttons">
+      <button class="contact-btn">Contactar Vendedor</button>
+      <button class="wishlist-btn">Agregar al Wishlist</button>
+    </div>
+  
+    <hr>
+  
+    <div class="comment-section">
+      <p>Deja un comentario</p>
+      <input type="text" placeholder="Escribe tu comentario">
+    </div>
+  
+    <div class="comments-container">
+        <div class="comments">
+          <p><strong>Comentarios</strong></p>
+        </div>
+        <button class="expand-btn" (click)="toggleComments()">
+          <mat-icon class="expand-icon" [ngClass]="{'rotated': showComments}">expand_more</mat-icon>
+        </button>
+      </div>
+  
+      <div class="comments-list" *ngIf="showComments">
+        <p *ngFor="let comment of comments">{{ comment }}</p>
+      </div>
+  </div>
